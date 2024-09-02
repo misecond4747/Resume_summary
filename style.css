@@ -1,0 +1,221 @@
+* {
+  padding: 0%;
+  margin: 0%;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "font-regular";
+  src: url("./assets/fonts/HankenGrotesk-VariableFont_wght.ttf");
+}
+@font-face {
+  font-family: "font-bold";
+  src: url("./assets/fonts/static/HankenGrotesk-Bold.ttf");
+}
+@font-face {
+  font-family: "font-Medium";
+  src: url("./assets/fonts/static/HankenGrotesk-Medium.ttf");
+}
+@font-face {
+  font-family: "font-ExtraBold";
+  src: url("./assets/fonts/static/HankenGrotesk-ExtraBold.ttf");
+}
+
+:root {
+  /* ### Primary/ */
+
+  --Light-red: hsla(0, 100%, 67%);
+  --Light-red-hsla: hsla(0, 100%, 67%, 5%);
+  --Orangey-yellow: hsla(39, 100%, 56%);
+  --Orangey-yellow-hsla: hsla(39, 100%, 56%, 5%);
+  --Green-teal: hsla(166, 100%, 37%);
+  --Green-teal-hsla: hsla(166, 100%, 37%, 5%);
+  --Cobalt-blue: hsla(234, 85%, 45%);
+  --Cobalt-blue-hsla: hsla(234, 85%, 45%, 5%);
+
+  /* ## Gradients/ */
+
+  /* background-color: ; */
+  --Light-slate-blue: hsl(252, 100%, 67%);
+  --Light-royal-blue: hsl(241, 81%, 54%);
+
+  /* circle */
+  --Violet-blue: rgba(78, 33, 202, 1);
+  --Persian-blue: hsla(241, 72%, 46%, 0);
+
+  /* ### Neutral/ */
+
+  --White: hsl(0, 0%, 100%);
+  --Pale-blue: hsl(221, 100%, 96%);
+  --Light-lavender: hsl(241, 100%, 89%);
+  --Dark-gray-blue: hsl(224, 30%, 27%);
+}
+
+body {
+  min-height: 100vh;
+  overflow: hidden;
+  font-family: "font-regular", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  min-width: 60%;
+  max-width: 1440px;
+  height: 100vh;
+  background-color: white;
+  display: flex;
+  border-radius: 30px;
+  box-shadow: 7px 10px 14px 1px var(--Light-lavender);
+}
+
+.leftContainer {
+  max-width: 50%;
+  background-image: linear-gradient(
+    var(--Light-slate-blue),
+    var(--Light-royal-blue)
+  );
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+.title {
+  color: var(--White);
+  font-size: calc(1.5rem + 1vw);
+}
+
+.title:nth-child(1) {
+  color: var(--Light-lavender);
+}
+
+.description {
+  color: var(--Light-lavender);
+  font-size: 1.5rem;
+  text-align: center;
+  width: 70%;
+  max-width: calc(100% - 2rem);
+}
+
+.circle {
+  min-width: calc(150px + 10vw);
+  min-height: calc(150px + 10vw);
+  background: linear-gradient(var(--Violet-blue), var(--Persian-blue));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  flex-direction: column;
+  color: white;
+  margin-block: 1rem;
+}
+
+.circle h1 {
+  font-size: calc(3rem + 3vw);
+}
+
+.circle p {
+  color: var(--Light-lavender);
+  font-size: calc(1rem + 0.5vw);
+}
+
+.rightContainer {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  width: 50%;
+}
+
+.rightContainer h2 {
+  color: var(--Dark-gray-blue);
+  font-size: calc(1.5rem + 1vw);
+}
+
+.lists {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-block: 2rem;
+  color: var(--White);
+  width: 100%;
+}
+
+.list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  border-radius: 10px;
+  padding: 1.2rem 1rem;
+  font-weight: bolder;
+}
+
+.list:nth-child(1) {
+  background: var(--Light-red-hsla);
+  color: var(--Light-red);
+}
+
+.list:nth-child(2) {
+  background-color: var(--Orangey-yellow-hsla);
+  color: var(--Orangey-yellow);
+}
+
+.list:nth-child(3) {
+  background-color: var(--Green-teal-hsla);
+  color: var(--Green-teal);
+}
+
+.list:nth-child(4) {
+  background-color: var(--Cobalt-blue-hsla);
+  color: var(--Cobalt-blue);
+}
+
+.listname {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.btn {
+  background-color: var(--Dark-gray-blue);
+  color: white;
+  font-size: 1.5rem;
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  cursor: pointer;
+  width: 100%;
+}
+
+@media screen and (max-width: 550px) {
+  body {
+    overflow: visible;
+  }
+  .container {
+    flex-direction: column;
+    height: auto;
+    min-width: 100%;
+    border-radius: 0px;
+  }
+  .leftContainer {
+    max-width: 100%;
+    min-height: 50%;
+    border-radius: 0px 0px 30px 30px;
+  }
+
+  .description {
+    width: 90%;
+  }
+
+  .rightContainer {
+    width: 100%;
+    min-height: 50%;
+    padding: 1rem;
+    text-align: center;
+  }
+}
