@@ -8,8 +8,8 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": "",
   "devDependencies": {
     "json-loader": "^0.5.7"
-  }
+  },
+  "description": ""
 }
