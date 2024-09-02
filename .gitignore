@@ -1,0 +1,37 @@
+# Operating System Files
+.DS_Store
+Thumbs.db
+ehthumbs.db
+
+# IDE and Editor Files
+.vscode/
+.idea/
+.project
+.classpath
+.settings/
+
+# Build Artifacts
+build/
+dist/
+out/
+*.class
+*.o
+*.so
+
+# Dependency Directories
+node_modules/
+venv/
+env/
+
+# Configuration Files
+.env
+config.local.json
+*.local
+
+# Log Files
+*.log
+
+# Generated Files
+*.tmp
+*.swp
+*.swo
